@@ -57,7 +57,7 @@ public class UserAndProjectInfo {
             Connection con = DriverManager.getConnection(url, user, passWord);
             Statement stmt = con.createStatement();
             // 検索の実施と結果の格納
-            String sql = "SELECT * FROM UserAndProjectsDetailsTableNinth WHERE ProjectID=" + projectID + " AND UserID=" + userID;
+            String sql = "SELECT * FROM UserAndProjectsDetailsTableNinth WHERE ProjectID=" + projectID;
             ResultSet rs = stmt.executeQuery(sql);
             while(rs.next()) {
 	            genreList.add(rs.getString("Genre"));
