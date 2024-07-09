@@ -42,7 +42,7 @@ public class ProjectInfo {
     public String progressstatus = "";
 
     // DB接続のためのアドレスなど
-    String server = "//postgresql:5432/"; 
+    String server = "//localhost:5432/"; 
 	String dataBase = "test1";
 	String user = "oops";
 	String passWord = "pass";
@@ -107,6 +107,29 @@ public class ProjectInfo {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
+    
+    //projectIDを引数に、そのIDに紐づくデータを全部消すメソッド
+    public void deleteProjectInfo(int projectID) {
+        try {
+            Class.forName("org.postgresql.Driver");
+            Connection con = DriverManager.getConnection(url, user, passWord);
+            
+            String sql2 = "DELETE FROM userandProjectsdetailsTableNinth WHERE projectID="  + projectID;
+            Statement stmt2 = con.createStatement();
+            stmt2.execute(sql2);
+            
+            stmt2.close();
+            
+            String sql1 = "DELETE FROM ProjectsTableNinth WHERE projectID="  + projectID + " ";
+            Statement stmt1 = con.createStatement();
+            stmt1.execute(sql1);
+            
+           stmt1.close();
+            con.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
 }
