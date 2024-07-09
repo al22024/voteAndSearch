@@ -64,7 +64,7 @@ public class UserInfo {
 		}
 	}
 	
-	
+	//projectIDから、投票状況のリストを返すメソッド
 	public List<List<String>> getVoterList(int projectID){
 		List<String> yet = new ArrayList<String>();
         List<String> done = new ArrayList<String>();
@@ -88,6 +88,7 @@ public class UserInfo {
 	        	done.add(rs2.getString("Displayname"));
 	        }
 	        
+			//リストのサイズを揃える
 	        while(yet.size() != done.size()) {
 		        if(yet.size() < done.size()) {
 		        	yet.add(" ");

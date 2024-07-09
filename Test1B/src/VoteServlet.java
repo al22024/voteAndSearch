@@ -1,3 +1,12 @@
+/*
+ * File Name	:VoteServlet.java
+ * Version		:Ver1.0
+ * Designer		:相内 優真
+ * Date			:2024.07.08
+ * Purpose		:UIから受け取った投票情報を処理するクラス
+ * 
+ */
+
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
@@ -29,6 +38,7 @@ public class VoteServlet extends HttpServlet {
 	    UserAndProjectInfo upinfo = new UserAndProjectInfo();
 	    ProjectInfo pinfo = new ProjectInfo();
 	    
+		//W6行き先投票画面からの入力を受け取る
 	    upinfo.genre = request.getParameter("GENRE");
 	    if(pinfo.getProjectInfo(projectID).category.equals("event")) {
 	    	upinfo.updateVoteInfo(userID, projectID);
@@ -39,6 +49,7 @@ public class VoteServlet extends HttpServlet {
 			upinfo.updateVoteInfo(userID, projectID);
 	    }
 	    
+		//Beansのsetterを実行
 	    VoteBean vb = new VoteBean();
 	    vb.setGenre(userID, projectID);
 	    vb.setBudget1(userID, projectID);
@@ -48,6 +59,7 @@ public class VoteServlet extends HttpServlet {
 	    vb.setVoterList(projectID);
 	    request.setAttribute("vb", vb);        
 	    	    
+		//JSPに遷移
 	    if(pinfo.getProjectInfo(projectID).managerID != userID) {	        
 	        String url="/checkVoteMember.jsp";
 	    	RequestDispatcher dispatcher
