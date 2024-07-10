@@ -1,12 +1,7 @@
 package dbtest;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.*;
+import java.util.*;
 
 /*
  * File Name	:UserAndProjectInfo.java
@@ -60,10 +55,10 @@ public class UserAndProjectInfo {
             String sql = "SELECT * FROM UserAndProjectsDetailsTableNinth WHERE ProjectID=" + projectID;
             ResultSet rs = stmt.executeQuery(sql);
             while(rs.next()) {
-	            genreList.add(rs.getString("Genre"));
-	            budget1List.add(rs.getString("Budget1"));
-	            budget2List.add(rs.getString("Budget2"));
-	            reviewList.add(rs.getString("Review"));
+	            ret.genreList.add(rs.getString("Genre"));
+	            ret.budget1List.add(rs.getString("Budget1"));
+	            ret.budget2List.add(rs.getString("Budget2"));
+	            ret.reviewList.add(rs.getString("Review"));
             }
             
             stmt.close();
