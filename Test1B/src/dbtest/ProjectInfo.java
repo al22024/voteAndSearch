@@ -63,7 +63,7 @@ public class ProjectInfo {
             String sql = "SELECT * FROM ProjectsTableNinth WHERE ProjectID = " + projectID;
             ResultSet rs = stmt.executeQuery(sql);
             rs.next();
-            ret.projectID = rs.getInt(projectID);
+            ret.projectID = rs.getInt("projectID");
             ret.projectName = rs.getString("Name");
             ret.dateTime = rs.getTimestamp("DateTime");
             ret.category = rs.getString("Category");
