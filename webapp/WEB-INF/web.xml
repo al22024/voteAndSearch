@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app>
+  
+  <servlet>
+    <servlet-name>ServletForDisplay</servlet-name>
+    <servlet-class>ServletForDisplay</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ServletForDisplay</servlet-name>
+    <url-pattern>/servlet/ServletForDisplay/</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ServletForResult</servlet-name>
+    <servlet-class>ServletForResult</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ServletForResult</servlet-name>
+    <url-pattern>/servlet/ServletForResult/</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Servlet4GSS</servlet-name>
+    <servlet-class>Servlet4GSS</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Servlet4GSS</servlet-name>
+    <url-pattern>/servlet/Servlet4GSS/</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Vote</servlet-name>
+    <servlet-class>VoteServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Vote</servlet-name>
+    <url-pattern>/servlet/vote/</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
