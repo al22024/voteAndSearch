@@ -20,14 +20,10 @@ public class ServlerForBackHome extends HttpServlet {
     	
     	String destination = request.getParameter("destination");
     	
-    	
-    	ProjectInfo projectinfo = new ProjectInfo();
-    	projectinfo.getProjectInfo(projectID);
-    	projectinfo.destination = destination;
-    	
-    	projectinfo.progressStatus = "334";//仮置き
-    	projectinfo.setProjectInfo();
-    	// このサーブレットの入出力を渡して，JSPを呼び出す．
+    	ProjectInfo pi = new ProjectInfo(projectID);
+    	pi.progressStatus = "Notification";
+    	Notification noti = new Notification(projectID);
+    	pi.updateProjectInfo();
     	// Beanに設定だれたデータをJSPの中で使う．
     	String url="/HomeForTest.html";
     	//要修正

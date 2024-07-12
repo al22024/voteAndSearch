@@ -19,9 +19,10 @@ public class ServletForResult extends HttpServlet {
     	// Get引数から「名前」をとってくる
     	String rating = request.getParameter("rating");
     	String name = request.getParameter("name");
+    	System.out.println("print in sfr" + name);
     	String address = request.getParameter("address");
     	String date = request.getParameter("date");
-    	String event = request.getParameter("event");
+//    	String event = request.getParameter("event");
 
     	// Beanを作る（「名前」から「メッセージ」を作る）
     	ResultBean result = new ResultBean();
@@ -33,6 +34,7 @@ public class ServletForResult extends HttpServlet {
     	int projectID = (int)session.getAttribute("projectID");
     	ProjectInfo projectinfo = new ProjectInfo();
 		ProjectInfo pi = projectinfo.getProjectInfo(projectID);
+		String eventName = name;
 		name = pi.projectName;
 		date = "" + pi.dateTime;
 		
@@ -40,7 +42,7 @@ public class ServletForResult extends HttpServlet {
     	result.setRating(rating);
     	result.setName(name);
     	result.setAddress(address);
-    	result.setEvent(event);
+    	result.setEvent(eventName);
     	result.setDate(date);
 
     	// このサーブレットの入出力を渡して，JSPを呼び出す．

@@ -29,15 +29,15 @@
 </head>
 <body>
 <%
-	String name = result.getName() + "(" + result.getAddress() + ")";
+	String name = result.getName() ;
 	String date = result.getDate();;
-	String event = result.getEvent();
+	String event = result.getEvent() + "(" + result.getAddress() + ")";
 	String str = result.getAddress() + "***" + result.getName();
 %>
     <p>以下の内容で決定します.よろしいですか?</p>
-    <p><%= event %></p>
-    <p><%= date %></p>
     <p><%= name %></p>
+    <p><%= date %></p>
+    <p><%= event %></p>
     <FORM method="GET" action="../ServletForBackHome/">
 		<div>
 			<label>

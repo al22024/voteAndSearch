@@ -157,4 +157,28 @@ public class ProjectInfo {
         }
 
     }
+    public void updateProjectInfo() {
+        try {
+            Class.forName("org.postgresql.Driver");
+            Connection con = DriverManager.getConnection(url, user, passWord);
+
+            String sql = "UPDATE ProjectsTableNinth SET projectName = ?, dateTime = ?, category = ?, destination = ?, managerID = ?, region = ?, progressstatus = ? WHERE projectID = ?";
+            PreparedStatement prestmt = con.prepareStatement(sql);
+
+            prestmt.setString(1, projectName);
+            prestmt.setTimestamp(2, dateTime);
+            prestmt.setString(3, category);
+            prestmt.setString(4, destination);
+            prestmt.setInt(5, managerID);
+            prestmt.setString(6, region);
+            prestmt.setString(7, progressStatus);
+            prestmt.setInt(8, projectID);
+
+            prestmt.executeUpdate();
+            prestmt.close();
+            con.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

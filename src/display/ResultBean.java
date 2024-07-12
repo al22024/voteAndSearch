@@ -1,9 +1,9 @@
 package display;
 
-import java.io.*;
+import java.io.Serializable;
 
 public class ResultBean implements Serializable {
-	String event;	//イベント名
+	String eventName;	//イベント名
 	String rating;
 	String name;
 	String address;
@@ -34,11 +34,11 @@ public class ResultBean implements Serializable {
 	}
 	
 	public String getEvent() {
-		return event;
+		return eventName;
 	}
 	
-	public void setEvent(String event) {
-		this.event = event;
+	public void setEvent(String eventName) {
+		this.eventName = eventName;
 	}
 	
 	public String getDate() {

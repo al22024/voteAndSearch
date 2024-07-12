@@ -28,6 +28,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
 import dbtest.ProjectInfo;
+import dbtest.UserAndProjectInfo;
 
 
 public class RequestVotingContent {

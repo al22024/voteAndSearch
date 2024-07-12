@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import dbtest.ProjectInfo;
 import display.DisplayBean;
 import display.DisplayEventsBean;
 
@@ -19,9 +20,12 @@ public class ServletForDisplay extends HttpServlet {
     {
     	// Get引数から「名前」をとってくる
     	HttpSession session = request.getSession(true);
-    	//String KEY = request.getParameter("MESSAGE");
+    	String KEY = request.getParameter("MESSAGE");
     	String ISEVENT = request.getParameter("ISEVENT");
     	int projectID = (int)session.getAttribute("projectID");
+    	ProjectInfo pi = new ProjectInfo(projectID);
+    	pi.progressStatus = "Searching";
+    	pi.updateProjectInfo();
     	if (false/*ISEVENT.equals("0")*/) {
     		// Beanを作る（「名前」から「メッセージ」を作る）
         	DisplayBean display = new DisplayBean();
