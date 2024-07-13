@@ -1,0 +1,66 @@
+<!--*******************************************************************
+*** File Name : VoteDest.html
+*** Version : V1.1
+*** Designer : 相内 優真
+*** Date : 2024.6.10
+*** Purpose : W6 行き先投票画面を表示する
+***
+*******************************************************************-->
+
+<!--*** Revision :
+*** V1.0 : 相内 優真, 2024.6.10
+*** V1.1 : 相内 優真, 2024.6.16 投票ボタンが押されたときの処理を追加-->
+
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>行き先投票</title>
+        <!--外部のCSSファイルを読み込み-->
+        <link rel="stylesheet" href="./pageStyle.css">
+    </head>
+    <body>
+        <div>
+            <p>希望の条件を入力してください</p>
+            <FORM method="GET" action="servlet/vote/">
+                <!--ジャンルのセレクトボックスを追加-->
+                <div>
+                    ジャンル
+                    <select name="GENRE">
+                        <option value="ラーメン">ラーメン</option>
+                        <option value="カレー">カレー</option>
+                        <option value="蕎麦">蕎麦</option>
+                    </select>
+                </div>
+
+                <br>
+
+                <!--予算の入力欄を追加-->
+                <div>
+                    予算
+                    <input type="text" name="BUDGET1">
+                    円 ～ 
+                    <input type="text" name="BUDGET2">
+                    円
+                </div>
+
+                <br>
+
+                <!--レビュー評価のセレクトボックスを追加-->
+                <div>
+                    レビュー評価
+                    <select name="REVIEW">
+                        <option value="3.5">星3.5以上</option>
+                        <option value="4.0">星4.0以上</option>
+                        <option value="4.5">星4.5以上</option>
+                    </select>
+                </div>
+
+                <br>
+
+                <!--投票ボタンの追加-->
+                <button type="submit">投票</button>
+            </FORM>
+        </div>
+    </body>
+</html>

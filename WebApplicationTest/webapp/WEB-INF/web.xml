@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app>
+
+  <servlet>
+    <servlet-name>Hello</servlet-name>
+    <servlet-class>HelloWorld</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>Simple</servlet-name>
+    <servlet-class>SimpleServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Hello</servlet-name>
+    <url-pattern>/servlet/hello</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>Simple</servlet-name>
+    <url-pattern>/servlet/Simple/</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Hll</servlet-name>
+    <servlet-class>Hello22074</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Hll</servlet-name>
+    <url-pattern>/servlet/hello22074/</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Cal</servlet-name>
+    <servlet-class>Plus22074</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Cal</servlet-name>
+    <url-pattern>/servlet/Calculation/</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>HashTest</servlet-name>
+    <servlet-class>GenPath</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>HashTest</servlet-name>
+    <url-pattern>/servlet/HashTest/</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Simple2</servlet-name>
+    <servlet-class>SimpleServlet2</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Simple2</servlet-name>
+    <url-pattern>/servlet/SimpleServlet2/</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Tricon22074</servlet-name>
+    <servlet-class>Tricon22074</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Tricon22074</servlet-name>
+    <url-pattern>/servlet/Tricon22074/</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>pluscon22074</servlet-name>
+    <servlet-class>Pluscon22074</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>pluscon22074</servlet-name>
+    <url-pattern>/servlet/Pluscon22074/</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Simple3</servlet-name>
+    <servlet-class>SimpleServlet3</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Simple3</servlet-name>
+    <url-pattern>/servlet/SimpleServlet3/</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ChatCon22074</servlet-name>
+    <servlet-class>ChatCon22074</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ChatCon22074</servlet-name>
+    <url-pattern>/servlet/ChatCon22074/</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ServletForDisplay</servlet-name>
+    <servlet-class>ServletForDisplay</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ServletForDisplay</servlet-name>
+    <url-pattern>/servlet/ServletForDisplay/</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ServletForResult</servlet-name>
+    <servlet-class>ServletForResult</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ServletForResult</servlet-name>
+    <url-pattern>/servlet/ServletForResult/</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Servlet4GSS</servlet-name>
+    <servlet-class>Servlet4GSS</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Servlet4GSS</servlet-name>
+    <url-pattern>/servlet/Servlet4GSS/</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Vote</servlet-name>
+    <servlet-class>VoteServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Vote</servlet-name>
+    <url-pattern>/servlet/vote/</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Save</servlet-name>
+    <servlet-class>ServletForSave</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Save</servlet-name>
+    <url-pattern>/servlet/ServletForSave/</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
